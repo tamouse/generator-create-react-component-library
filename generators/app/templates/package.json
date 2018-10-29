@@ -1,0 +1,59 @@
+{
+  "name": "ks_components",
+  "version": "0.1.0",
+  "description": "A Kickserv React component library",
+  "main": "lib/index.js",
+  "repository": "git@gitlab.com:tamouse/ks_components.git",
+  "author": "Tamara Temple <tamouse@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "styled-components": "^4.0.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "3.4.11",
+    "@storybook/addons": "3.4.11",
+    "@storybook/react": "3.4.11",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.8.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "prettier": "1.14.3",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-test-renderer": "^16.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "build": "echo 'no build yet'",
+    "test": "echo 'no tests yet'",
+    "storybook": "start-storybook -p 9008 -c .storybook",
+    "start": "yarn run storybook"
+  }
+}
